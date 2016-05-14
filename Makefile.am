@@ -20,6 +20,9 @@ lib_libhodlgen_a_SOURCES = \
 #hodlgen_CXXFLAGS=$(hodlgen_CXXFLAGS) -Wall -Wextra -pedantic -Werror
 #hodlgen_CFLAGS=$(hodlgen_CFLAGS) -Wall -Wextra -pedantic -Werror
 
+hodlgen_CFLAGS=$(WARN_CFLAGS) -pedantic
+hodlgen_CXXFLAGS=$(WARN_CXXFLAGS) -pedantic
+hodlgen_LDFLAGS=$(WARN_LDFLAGS)
 hodlgen_LDADD = lib/libhodlgen.a $(HODLGEN_LDADD)
 
 hodlgen_tests_CPPFLAGS = $(HODLGEN_CPPFLAGS)
