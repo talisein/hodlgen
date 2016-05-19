@@ -15,7 +15,9 @@ hodlgen_SOURCES = \
 
 lib_libhodlgen_a_SOURCES = \
 	src/diceBitConverter.cc \
-	src/diceBitConverter.h
+	src/diceBitConverter.h \
+	src/byte_store.cc \
+	src/byte_store.h
 
 #hodlgen_CXXFLAGS=$(hodlgen_CXXFLAGS) -Wall -Wextra -pedantic -Werror
 #hodlgen_CFLAGS=$(hodlgen_CFLAGS) -Wall -Wextra -pedantic -Werror
@@ -33,7 +35,9 @@ hodlgen_tests_LDFLAGS = $(AM_LDFLAGS) $(HODLGEN_LDFLAGS) $(CPPUTEST_LIBS)
 
 hodlgen_tests_SOURCES = \
 	tests/test_runner.cc \
-	tests/diceBitConverterTest.cc
+	tests/diceBitConverterTest.cc \
+	tests/cpp_assumptions.cc \
+	tests/byte_store_tests.cc
 
 RUN_HODLGEN_TESTS = ./$(HODLGEN_TESTS)
 
